@@ -1,15 +1,16 @@
 #simple calculator website by @noxzyous
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, url_for, request
 
-calc = Flask(__name__)
+app = Flask(__name__)
+app.config.from_object(__name__)
 
-@calc.route('/')
+@app.route('/')
 def home_page():
-    return render_template('form.html')
+    return render_template('form1.html')
 
-@calc.route('/result', methods=['GET','POST'])
-def math_is():
+@app.route('/', methods=['GET','POST'])
+def Ans():
     if request.method=='POST':
         num1 = request.form.get("num1", type=int)
         num2 = request.form.get("num2", type=int)
@@ -27,10 +28,10 @@ def math_is():
             else:
                 result = num1/num2
         else:
-            result = 0
+            result = 'Error!'
         output = result
-        return render_template('result.html', output=output)
+        return render_template('form1.html', output=output)
 
 
 if __name__ == '__main__':
-    calc.run(debug=True)
+    app.run(debug=True)
