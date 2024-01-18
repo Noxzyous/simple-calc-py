@@ -1,9 +1,8 @@
 #simple calculator website by @noxzyous
 
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
-app.config.from_object(__name__)
 
 @app.route('/')
 def home_page():
