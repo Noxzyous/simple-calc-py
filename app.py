@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    return render_template('form.html')
+    return render_template('form1.html')
 
 @app.route('/result', methods=['GET','POST'])
 def Ans():

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>simple Calculator | Noxzyous</title>
+    </head>
+
+    <body style="background-image: url(/static/anime-art.png);">
+        <br><br><br>
+        <div style="width: 100%; height: 100%; display: flex; margin: 0;">
+        <div style="width: 35%;"></div>
+        <div style="width: 30%; color: white; background: transparent; border: 2px solid rgba(255, 255, 255, .2); backdrop-filter: blur(5px); box-shadow: 0 0 5px rgb(255, 255, 255); border-radius: 5px; padding: 0.5px 0.5px;">
+        <br><br>
+        <div style="color: black;"><center><h1>Simple Calculator</h1></center></div>
+        <form action="/result" method="post">
+            <center>
+            <div>
+                <label style="color: black;"><b>Number 1:</b></label>
+                <input type="number" id="num1" name="num1" placeholder="Enter a value" style="width: 50%; height: 50%; background: transparent; border: none; outline: none; border: 2px solid rgba(255, 255, 255, 0.966); border-radius: 30px;">
+            </div>
+            <br><br>
+            <div>
+                <label style="color: black;"><b>Number 2:</b></label>
+                <input type="number" id="num2" name="num2" placeholder="Enter a value" style="width: 50%; height: 50%; background: transparent; border: none; outline: none; border: 2px solid rgba(255, 255, 255, 0.966); border-radius: 30px;">
+            </div>
+            </center>
+            <br><br>
+            
+            <center>
+            <div style="color: white;">
+                <input type="radio" id="Addition" name="yor_job" value="Addition">
+                <label for="Addition">Addition</label>
+                <input align="center" type="radio" id="Subtraction" name="yor_job" value="Subtraction">
+                <label for="Subtraction">Subtraction</label><br>
+                <input align="center" type="radio" id="Multiplication" name="yor_job" value="Multiplication">
+                <label for="Multiplication">Multiplication</label>
+                <input align="center" type="radio" id="Division" name="yor_job" value="Division">
+                <label for="Division">Division</label><br> 
+            </div>
+            </center>
+            <br>
+            <div align="middle style="padding: 1px 1px 1px 30px;"><center><input type="submit" value="Do math" style="border: 1px solid rgb(6, 155, 193); border-radius: 30px;"></center></div>
+            <br><br>
+            </form>
+        </div>
+            <div style="width: 35%;"></div>
+    </div>
+    </body>
+</html>
